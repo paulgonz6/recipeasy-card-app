@@ -1,0 +1,8 @@
+<section>
+  <%= form_tag('/create_recipe', method: 'get', class: 'form') do %>
+    <%= label_tag(:url, "Recipe Url:") %>
+    <%= text_field_tag(:url) %>
+
+    <%= submit_tag("Generate Recipe Card") %>
+  <% end %>
+</section>

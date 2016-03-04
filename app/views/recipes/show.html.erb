@@ -1,0 +1,48 @@
+<div class="container">
+  <div class='row'>
+    <div class="col-md-4">
+      <%= image_tag(@image, class: 'img-responsive') %>
+    </div>
+    <div class="col-md-8">
+      <section class='well'>
+        <div class='recipe-title'>
+          <h2><%= @raw_title %></h2>
+        </div>
+
+        <div class='yields'>
+          Yields: <%= @recipeYield %>
+        </div>
+
+        <div class='prepTime'>
+          Prep Time: <%= @prepTime %> minutes
+        </div>
+
+        <div class='cookTime'>
+          Cook Time: <%= @cookTime %> minutes
+        </div>
+
+        <div class='description'>
+          Description: <%= @description %>
+        </div>
+
+        <div class='ingredients'>
+          <h3>Ingredients</h3>
+          <ol>
+            <% @ingredients.each do |ingredient| %>
+              <li><%= ingredient.text %></li>
+            <% end %>
+          </ol>
+        </div>
+
+        <div class='directions'>
+          <h3>Directions</h3>
+          <ol>
+            <% @directions.each do |direction| %>
+              <li><%= direction.text %></li>
+            <% end %>
+          </ol>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
